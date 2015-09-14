@@ -187,9 +187,11 @@
 
         function extend(a, b) {
             var key;
-            for (key in b)
-                if (b.hasOwnProperty(key))
+            for (key in b) {
+                if (b.hasOwnProperty(key)) {
                     a[key] = b[key];
+                }
+            }
             return a;
         }
 
@@ -393,7 +395,7 @@
             moments.sort(function (m1, m2) {
                 return m1.score - m2.score;
             });
-            return moments[0];
+            return moments[0].moment;
         }
 
         function removeParsedTokens(config) {
