@@ -1,0 +1,21 @@
+{
+  "name": "moment-taiwan",
+  "version": "0.0.1",
+  "authors": [
+    "brad.wu <bradwoo8621@gmail.com>"
+  ],
+  "description": "Taiwan format support for momentjs",
+  "main": "target/moment-taiwan.js",
+  "keywords": [
+    "momentjs",
+    "taiwan"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bradwoo8621/moment-taiwan",
+  "dependencies": {
+    "momentjs": "^2.9.0"
+  },
+  "ignore": [
+    "test/*"
+  ]
+}
