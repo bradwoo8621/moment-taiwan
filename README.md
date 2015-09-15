@@ -40,7 +40,7 @@ This plugin tries to mimic momentjs api. Basically, when you want to format or p
 
 ```javascript
 m = moment('104/01/01', 'tYY/MM/DD') // Parse a Taiwan date
-m.format('tYY/MM/DD [is] YYYY/M/D') // 104/01/01 is 104/01/01
+m.format('tYY/MM/DD [is] YYYY/M/D') // 104/01/01 is 2015/01/01
 
 m.twYear() // 104
 ```
