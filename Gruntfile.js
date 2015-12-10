@@ -11,11 +11,11 @@ module.exports = function (grunt) {
             uglify: {
                 target: {
                     options: {
-                        banner: '/*! <%= pkg.groupId %>-<%= pkg.artifactId %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
                         sourceMap: true
                     },
                     files: {
-                        '<%= targetPath %>/<%= pkg.groupId %>-<%= pkg.artifactId %>.min.js': '<%= sourcePath %>/moment-taiwan.js'
+                        '<%= targetPath %>/<%= pkg.name %>.min.js': '<%= sourcePath %>/moment-taiwan.js'
                     }
                 }
             },
@@ -45,6 +45,9 @@ module.exports = function (grunt) {
                 target: {
                     files: {src: ['<%= sourcePath %>/moment-taiwan.js']}
                 }
+            },
+            nodeunit: {
+                tests: ['test/node/test.js']
             }
         });
 
@@ -52,7 +55,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
     // copy bower files to target
     grunt.registerTask('default', ['clean:target', 'jshint:target', 'uglify:target', 'copy:target']);
+    grunt.registerTask('test', ['nodeunit']);
 };

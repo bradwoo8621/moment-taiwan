@@ -1,6 +1,9 @@
 #moment-taiwan
 A Taiwan calendar system plugin for moment.js.
 
+### Status
+[![Build Status](https://travis-ci.org/bradwoo8621/moment-taiwan.svg?branch=master)](https://travis-ci.org/bradwoo8621/moment-taiwan)
+
 #About
 
 Taiwan calendar is a calendar which used in Taiwan, China. Read more on [Wikipedia](https://zh.wikipedia.org/wiki/%E6%B0%91%E5%9C%8B%E7%B4%80%E5%B9%B4) or see Calendar Converter.
