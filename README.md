@@ -33,9 +33,12 @@ You may use the target/moment-taiwan.js file.
 </script>
 ```
 
-Other
+NodeJS
 
-Not test yet.
+```javascript
+var tw = require('moment-taiwan');
+var date = moment('104/10/20', 'tYY/MM/DD');
+```
 
 #API
 
