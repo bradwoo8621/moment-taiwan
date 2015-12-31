@@ -10,3 +10,8 @@ install:
   - npm install grunt-contrib-nodeunit
   - npm install grunt-contrib-uglify
   - npm install moment
+
+notifications:
+  slack:
+    rooms:
+      - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#build
