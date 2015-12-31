@@ -14,4 +14,4 @@ install:
 notifications:
   slack:
     rooms:
-      - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#build
+      - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#travis-ci
