@@ -15,3 +15,11 @@ notifications:
   slack:
     rooms:
       - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#travis-ci
+
+deploy:
+    skip_cleanup: true
+    provider: npm
+    email: bradwoo8621@gmail.com
+    api_key: e15a99c8-cccb-480e-9d0e-3e73c837a748
+    on:
+        tags: true

@@ -252,7 +252,7 @@
      * @returns {*}
      */
     var yearFromConfig = function(config) {
-        return config._twYear ? config._twYear : 1;
+        return config._twYear;
     };
 
     /**
@@ -331,7 +331,9 @@
             }
         });
         config.input = input;
+		var orgFormat = config.format;
         config.format = format;
+		return orgFormat != format;
     };
 
     /************************************
@@ -361,9 +363,23 @@
             } else {
                 // create moment by given single format
                 var year = makeDateFromStringAndFormat(config);
-                removeParsedTokens(config);
-                format = 'YYYY-' + config.format;
-                input = taiwan.calYear(year) + '-' + config.input;
+                var removed = removeParsedTokens(config);
+				if (removed) {
+					format = 'YYYY-' + config.format;
+					// has tw format
+					if (typeof year === 'undefined') {
+						// no year parsed, let it be invalid
+						input = 'ABCD-' + config.input;
+					} else {
+						input = taiwan.calYear(year) + '-' + config.input;
+					}
+				} else {
+					// keep original
+					format = origFormat;
+					input = origInput;
+				}
+                // format = 'YYYY-' + config.format;
+                // input = taiwan.calYear(year) + '-' + config.input;
             }
         }
 
