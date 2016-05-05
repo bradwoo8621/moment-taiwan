@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/bradwoo8621/moment-taiwan/issues"
   },
-  "licenses": "MIT",
+  "license": "MIT",
   "engines": {
     "node": ">= 0.8.0"
   },
