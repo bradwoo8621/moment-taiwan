@@ -20,6 +20,6 @@ deploy:
     skip_cleanup: true
     provider: npm
     email: bradwoo8621@gmail.com
-    api_key: e15a99c8-cccb-480e-9d0e-3e73c837a748
+    api_key: 65c480ab-8d6e-4e0e-9f52-9b24904489a7
     on:
         tags: true
