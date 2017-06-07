@@ -1,25 +1,24 @@
 language: node_js
 node_js:
-  - 4.1
+- 4.1
 install:
-  - npm install -g grunt-cli
-  - npm install grunt
-  - npm install grunt-contrib-clean
-  - npm install grunt-contrib-copy
-  - npm install grunt-contrib-jshint
-  - npm install grunt-contrib-nodeunit
-  - npm install grunt-contrib-uglify
-  - npm install moment
-
+- npm install -g grunt-cli
+- npm install grunt
+- npm install grunt-contrib-clean
+- npm install grunt-contrib-copy
+- npm install grunt-contrib-jshint
+- npm install grunt-contrib-nodeunit
+- npm install grunt-contrib-uglify
+- npm install moment
 notifications:
   slack:
     rooms:
-      - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#travis-ci
-
+    - nest-parrot:z3jqw9krJbPu0CcQBKS90AnZ#travis-ci
 deploy:
-    skip_cleanup: true
-    provider: npm
-    email: bradwoo8621@gmail.com
-    api_key: 3cae1ae6-4d60-433d-b4d8-1072f9a7c4c1
-    on:
-        tags: true
+  skip_cleanup: true
+  provider: npm
+  email: bradwoo8621@gmail.com
+  api_key:
+    secure: JGP0SPZG05SUB7TT4JPxQVFqxMeo2o36FHPhOFckDvctKPDCvlIru1kQ3EhuHXTHFM6VnfvLs7dyg2GmaHTkDLRflDchWYKXQhjKYe2W4PysKT5DSBxKb45EDgrEdxX0BC71hHIxLlxiumwOKdhl2lBuDs2Y7UxqN66caWm8K2SC+bp+bggukBfj7qN2KKAz+J5UpFBY+qdzvyLxgg5Zy6q3LHar2us91l2yfRHj06nit3Uo0Kop5pSbz+iAZWa3VD6Eyacs2jS3d2EXgPPNIa5A882H66OMSssxPBEtAkyasOiKqTIpLV73I/mCDG3UVowS669VYW78K6NaKbCR+V0zyGJd6+6TX2/csNnt8pDJEoOsOiv2wG3kS0Jf7pIW6jCK11G/NwR3GtiG+U8r6uhIre/f3H2bdo3X1eGHG+/EE3HenEK/oO/tdCpdORTzgTVb735uh5alSAPvrqswEMW/IVKOXOz0PMtGJ4dnsW8tAV/Dcaai4rFUD8U6JKLrU8pzrf0gUdMjxGkJOgqdMgyJ+rP0Im0WlRBqeeK8jRmAg8dC/HLBqJgTRnVwyOTw4ok42gF/WA5C91VV9yD7U/bIyCBlYgIDUGxd/lJRrFYxoqCqYUWBnZrK2WGcnlX8j+q/IrX8gKHeTIUVVKGwsUCDv+2jR9Am5n1J53SyT/I=
+  on:
+    tags: true
